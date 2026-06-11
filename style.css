@@ -1,0 +1,207 @@
+/* =========================================================
+   Urban Travel Blog — Berlijn 2026
+   Styleguide-kleuren (zelfde palet als het visuele ontwerp):
+   - Berlijn-blauw:  #2B4C8C
+   - Spree-oranje:   #E8703A
+   - U-Bahn-geel:    #F2C744
+   - IJsblauw:       #CFE0E8
+   - Beton-grijs:    #F1F0EC
+   ========================================================= */
+
+:root {
+  --blauw: #2B4C8C;
+  --oranje: #E8703A;
+  --geel: #F2C744;
+  --ijsblauw: #CFE0E8;
+  --grijs: #F1F0EC;
+  --tekst: #1E2430;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--tekst);
+  background: #fff;
+  line-height: 1.6;
+}
+
+h1, h2, h3, .logo { font-family: 'Archivo', sans-serif; }
+
+/* ===== Header ===== */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  border-bottom: 3px solid var(--geel);
+  z-index: 1100;
+}
+.logo { font-weight: 900; font-size: 18px; letter-spacing: 2px; color: var(--blauw); text-decoration: none; }
+.logo span { color: var(--oranje); }
+.site-header nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: var(--tekst);
+  font-weight: 500;
+  font-size: 14px;
+}
+.site-header nav a:hover { color: var(--oranje); }
+
+/* ===== Hero ===== */
+.hero {
+  background: var(--ijsblauw);
+  padding: 90px 32px 70px;
+  text-align: center;
+}
+.hero-kicker {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 13px;
+  color: var(--oranje);
+  font-weight: 600;
+}
+.hero h1 {
+  font-size: clamp(56px, 10vw, 110px);
+  font-weight: 900;
+  letter-spacing: 10px;
+  color: var(--blauw);
+  line-height: 1.05;
+  margin: 12px 0;
+}
+.hero-sub { max-width: 520px; margin: 0 auto 20px; }
+.status-badge {
+  display: inline-block;
+  background: var(--geel);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ===== Secties ===== */
+.section { padding: 70px 32px; max-width: 1100px; margin: 0 auto; }
+.section-alt { background: var(--grijs); max-width: none; }
+.section-alt > * { max-width: 1100px; margin-left: auto; margin-right: auto; }
+.section h2 {
+  font-size: 34px;
+  font-weight: 900;
+  color: var(--blauw);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+.section-intro { margin-bottom: 28px; color: #4a5160; max-width: 640px; }
+
+/* ===== Posts grid ===== */
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+.post-card {
+  background: #fff;
+  border: 1px solid #e3e3de;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.post-card:hover { transform: translateY(-4px); box-shadow: 0 10px 24px rgba(43,76,140,.12); }
+.post-card img { width: 100%; height: 170px; object-fit: cover; display: block; background: var(--ijsblauw); }
+.post-card .card-body { padding: 18px; }
+.post-card .dag-tag {
+  display: inline-block;
+  background: var(--blauw);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+.post-card h3 { font-size: 18px; margin-bottom: 6px; }
+.post-card p { font-size: 14px; color: #4a5160; }
+
+/* ===== Kaart & filters ===== */
+#map {
+  height: 480px;
+  border-radius: 12px;
+  border: 1px solid #d9d9d2;
+  z-index: 1; /* onder de sticky header blijven */
+}
+.filters { margin-bottom: 16px; display: flex; flex-wrap: wrap; gap: 10px; }
+.filter-btn {
+  border: 2px solid var(--blauw);
+  background: #fff;
+  color: var(--blauw);
+  padding: 7px 16px;
+  border-radius: 999px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+}
+.filter-btn.active { background: var(--blauw); color: #fff; }
+.filter-btn:hover { background: var(--oranje); border-color: var(--oranje); color: #fff; }
+
+/* ===== Tijdlijn ===== */
+.timeline { border-left: 4px solid var(--geel); padding-left: 28px; }
+.timeline-item { position: relative; padding-bottom: 28px; }
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -38px;
+  top: 6px;
+  width: 14px; height: 14px;
+  background: var(--oranje);
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+.timeline-item h3 { font-size: 18px; color: var(--blauw); }
+.timeline-item p { font-size: 14px; color: #4a5160; max-width: 560px; }
+
+/* ===== Instagram grid ===== */
+.insta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 12px;
+}
+.insta-grid a { display: block; border-radius: 10px; overflow: hidden; }
+.insta-grid img { width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; transition: transform .2s; }
+.insta-grid img:hover { transform: scale(1.05); }
+.insta-fallback {
+  aspect-ratio: 1/1;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  font-family: 'Archivo', sans-serif;
+  font-size: 14px;
+  text-align: center;
+  padding: 10px;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  background: var(--blauw);
+  color: #fff;
+  text-align: center;
+  padding: 28px;
+  font-size: 13px;
+}
+
+.loading { color: #777; font-style: italic; }
+
+@media (max-width: 640px) {
+  .site-header { flex-direction: column; gap: 10px; }
+  .section { padding: 48px 20px; }
+}
+
+/* Link naar CMS-dashboard in de navigatie */
+.nav-admin{background:var(--blauw);color:#fff !important;padding:6px 14px;border-radius:999px;font-size:13px;}
+.nav-admin:hover{background:var(--oranje);}

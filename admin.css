@@ -1,0 +1,73 @@
+/* CMS Dashboard — Urban Travel Blog Berlijn 2026 */
+:root{
+  --blauw:#2B4C8C; --oranje:#E8703A; --geel:#F2C744;
+  --ijsblauw:#CFE0E8; --grijs:#F1F0EC; --tekst:#1E2430;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',sans-serif;color:var(--tekst);background:#F7F7F4;display:flex;min-height:100vh;}
+h1,h2,.brand{font-family:'Archivo',sans-serif;}
+
+/* Sidebar */
+.sidebar{width:240px;background:var(--blauw);color:#fff;padding:28px 20px;display:flex;flex-direction:column;flex-shrink:0;}
+.brand{font-weight:900;font-size:18px;letter-spacing:1px;margin-bottom:36px;}
+.brand span{color:var(--geel);display:block;font-size:13px;letter-spacing:3px;}
+.nav-item{display:block;width:100%;text-align:left;background:transparent;border:none;color:#E8EEF8;font-family:'Inter',sans-serif;font-size:15px;font-weight:500;padding:12px 14px;border-radius:8px;cursor:pointer;margin-bottom:6px;}
+.nav-item:hover{background:rgba(255,255,255,.1);}
+.nav-item.active{background:var(--oranje);color:#fff;font-weight:600;}
+.back-link{margin-top:auto;color:var(--geel);text-decoration:none;font-size:14px;padding:12px 0;}
+.back-link:hover{text-decoration:underline;}
+.sidebar-note{font-size:12px;color:#9DB2D6;margin-top:8px;}
+
+/* Content */
+.content{flex:1;padding:40px;overflow-y:auto;}
+.view.hidden{display:none;}
+.content-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:28px;gap:20px;}
+.content-head h1{font-size:30px;color:var(--blauw);margin-bottom:6px;}
+.content-head p{color:#5a6170;max-width:560px;font-size:14px;}
+
+.btn-primary{background:var(--blauw);color:#fff;border:none;padding:11px 20px;border-radius:8px;font-family:'Inter',sans-serif;font-weight:600;font-size:14px;cursor:pointer;white-space:nowrap;}
+.btn-primary:hover{background:var(--oranje);}
+.btn-grijs{background:#E3E3DE;color:var(--tekst);border:none;padding:11px 20px;border-radius:8px;font-family:'Inter',sans-serif;font-weight:600;font-size:14px;cursor:pointer;}
+.btn-grijs:hover{background:#d3d3cc;}
+
+/* Lijst met kaarten */
+.lijst{display:flex;flex-direction:column;gap:12px;}
+.rij-item{background:#fff;border:1px solid #e3e3de;border-radius:10px;padding:16px 18px;display:flex;align-items:center;gap:16px;}
+.rij-item img{width:64px;height:64px;object-fit:cover;border-radius:8px;background:var(--ijsblauw);flex-shrink:0;}
+.rij-item .info{flex:1;}
+.rij-item .tag{display:inline-block;background:var(--blauw);color:#fff;font-size:11px;font-weight:600;padding:2px 9px;border-radius:999px;margin-bottom:5px;}
+.rij-item .tag.cat{background:var(--oranje);text-transform:capitalize;}
+.rij-item h3{font-size:16px;font-family:'Inter',sans-serif;font-weight:600;margin-bottom:3px;}
+.rij-item p{font-size:13px;color:#6a7180;}
+.rij-acties{display:flex;gap:8px;}
+.icon-btn{border:1px solid #d9d9d2;background:#fff;border-radius:7px;padding:8px 12px;cursor:pointer;font-size:13px;font-weight:600;color:var(--blauw);}
+.icon-btn:hover{background:var(--ijsblauw);}
+.icon-btn.verwijder{color:#C0392B;}
+.icon-btn.verwijder:hover{background:#FDEDEC;}
+
+.leeg{color:#9a9a90;font-style:italic;padding:30px;text-align:center;}
+
+/* Modal */
+.modal{position:fixed;inset:0;background:rgba(30,36,48,.55);display:flex;align-items:center;justify-content:center;padding:20px;z-index:100;}
+.modal.hidden{display:none;}
+.modal-box{background:#fff;border-radius:14px;padding:28px;width:100%;max-width:480px;max-height:90vh;overflow-y:auto;}
+.modal-box h2{font-size:22px;color:var(--blauw);margin-bottom:18px;}
+.modal-box label{display:block;font-size:13px;font-weight:600;color:var(--tekst);margin-bottom:14px;}
+.modal-box input,.modal-box textarea,.modal-box select{width:100%;margin-top:5px;padding:10px 12px;border:1px solid #d3d3cc;border-radius:8px;font-family:'Inter',sans-serif;font-size:14px;font-weight:400;}
+.modal-box textarea{resize:vertical;}
+.modal-box .rij{display:flex;gap:12px;}
+.modal-box .rij label{flex:1;}
+.hint{display:block;font-weight:400;color:#8a8a80;font-size:12px;margin-top:8px;margin-bottom:2px;}
+.preview{width:100%;max-height:160px;object-fit:cover;border-radius:8px;margin-bottom:14px;}
+.preview.hidden{display:none;}
+.modal-acties{display:flex;justify-content:flex-end;gap:10px;margin-top:6px;}
+
+@media(max-width:680px){
+  body{flex-direction:column;}
+  .sidebar{width:100%;flex-direction:row;align-items:center;flex-wrap:wrap;gap:8px;padding:16px;}
+  .brand{margin-bottom:0;margin-right:auto;}
+  .brand span{display:inline;margin-left:6px;}
+  nav{display:flex;gap:6px;}
+  .back-link,.sidebar-note{margin:0;}
+  .content{padding:24px 16px;}
+}

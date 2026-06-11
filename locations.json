@@ -1,0 +1,10 @@
+[
+  { "naam": "Berlin Hauptbahnhof", "lat": 52.5251, "lng": 13.3694, "categorie": "overig", "beschrijving": "Aankomst- en vertrekpunt van de reis." },
+  { "naam": "DDR Museum", "lat": 52.5192, "lng": 13.4028, "categorie": "museum", "beschrijving": "Interactief museum over het leven in de DDR (dag 2)." },
+  { "naam": "Urban Nation", "lat": 52.4995, "lng": 13.3577, "categorie": "street-art", "beschrijving": "Museum voor urban contemporary art (dag 2)." },
+  { "naam": "Dark Matter", "lat": 52.4836, "lng": 13.4972, "categorie": "museum", "beschrijving": "Indrukwekkende licht-expositie (dag 2)." },
+  { "naam": "Ernst-Litfass-Schule", "lat": 52.5845, "lng": 13.3920, "categorie": "school", "beschrijving": "Creatieve CityWalk-opdracht met Duitse studenten (dag 3)." },
+  { "naam": "Teufelsberg", "lat": 52.4978, "lng": 13.2411, "categorie": "street-art", "beschrijving": "Voormalig luisterstation met uitzicht over Berlijn (dag 4)." },
+  { "naam": "Restaurant Roots", "lat": 52.5300, "lng": 13.4010, "categorie": "horeca", "beschrijving": "Gezamenlijk afsluitend diner (dag 4)." },
+  { "naam": "Hostel", "lat": 52.5070, "lng": 13.4400, "categorie": "overig", "beschrijving": "Onze uitvalsbasis tijdens de reis." }
+]

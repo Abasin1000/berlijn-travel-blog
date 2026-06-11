@@ -1,0 +1,32 @@
+[
+  {
+    "dag": "Dag 1",
+    "title": "Aankomst in Berlijn",
+    "excerpt": "Vanuit Tilburg met de bus naar Berlijn. Inchecken bij het hostel en 's avonds een eerste wandeling door de stad.",
+    "afbeelding": "https://images.unsplash.com/photo-1560969184-10fe8719e047?w=800&q=60"
+  },
+  {
+    "dag": "Dag 2",
+    "title": "DDR Museum & Urban Nation",
+    "excerpt": "In groepen naar het DDR-museum en Urban Nation, afgesloten met de indrukwekkende expositie in Dark Matter.",
+    "afbeelding": "https://images.unsplash.com/photo-1587330979470-3595ac045ab0?w=800&q=60"
+  },
+  {
+    "dag": "Dag 3",
+    "title": "CityWalk met de Ernst-Litfass-Schule",
+    "excerpt": "Samenwerken met Duitse studenten aan een creatieve opdracht rondom een CityWalk, gepresenteerd in digitale en analoge vorm.",
+    "afbeelding": "https://images.unsplash.com/photo-1528728329032-2972f65dfb3f?w=800&q=60"
+  },
+  {
+    "dag": "Dag 4",
+    "title": "Teufelsberg & diner bij Roots",
+    "excerpt": "Een historische locatie met een adembenemend uitzicht over de stad. Afsluitend diner bij Roots.",
+    "afbeelding": "https://images.unsplash.com/photo-1599946347371-68eb71b16afc?w=800&q=60"
+  },
+  {
+    "dag": "Dag 5",
+    "title": "Terug naar Tilburg",
+    "excerpt": "Vol inspiratie en nieuwe kennis terug naar huis. Tijd om alle ervaringen te verwerken in onze projecten.",
+    "afbeelding": "https://images.unsplash.com/photo-1554072675-66db59dba46f?w=800&q=60"
+  }
+]

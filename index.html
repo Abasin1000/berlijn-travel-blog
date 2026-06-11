@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Urban Travel Blog — Berlijn 2026 | Proof of Concept</title>
+
+  <!-- Leaflet (kaart-library, gratis & open source) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== NAVIGATIE ===== -->
+  <header class="site-header">
+    <a href="#" class="logo">URBAN<span>TRAVEL</span>BLOG</a>
+    <nav>
+      <a href="#dagen">Day by day</a>
+      <a href="#kaart">Kaart</a>
+      <a href="#blog">Blog</a>
+      <a href="#instagram">Instagram</a>
+      <a href="#overons">Over ons</a>
+      <a href="admin.html" class="nav-admin">CMS-dashboard</a>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <p class="hero-kicker">Erasmus+ studiereis · april 2026</p>
+    <h1>BERLIJN<br>2026</h1>
+    <p class="hero-sub">Vijf dagen street art, geschiedenis en creativiteit — vastgelegd voor de volgende lichting studenten.</p>
+    <span id="cms-status" class="status-badge">CMS-status: laden…</span>
+  </section>
+
+  <!-- ===== DAY BY DAY (PoC 1: data uit CMS) ===== -->
+  <section id="dagen" class="section">
+    <h2>Day by day</h2>
+    <p class="section-intro">Deze posts worden live opgehaald uit het CMS via de WordPress REST API (PoC 1).</p>
+    <div id="posts-grid" class="posts-grid">
+      <p class="loading">Posts laden uit het CMS…</p>
+    </div>
+  </section>
+
+  <!-- ===== KAART (PoC 3: markers uit CMS-coördinaten) ===== -->
+  <section id="kaart" class="section section-alt">
+    <h2>Interactieve kaart</h2>
+    <p class="section-intro">Alle markers komen uit het CMS (coördinaten zijn niet hardcoded). Filter op categorie (PoC 3).</p>
+    <div id="filters" class="filters"></div>
+    <div id="map"></div>
+  </section>
+
+  <!-- ===== BLOG / TIJDLIJN ===== -->
+  <section id="blog" class="section">
+    <h2>Tijdlijn van de reis</h2>
+    <div id="timeline" class="timeline"></div>
+  </section>
+
+  <!-- ===== INSTAGRAM (PoC 2: dynamische feed) ===== -->
+  <section id="instagram" class="section section-alt">
+    <h2>Instagram</h2>
+    <p class="section-intro">De feed wordt dynamisch ingeladen via een script — geen statische afbeeldingen (PoC 2).</p>
+    <div id="insta-grid" class="insta-grid"></div>
+  </section>
+
+  <!-- ===== OVER ONS ===== -->
+  <section id="overons" class="section">
+    <h2>Over ons</h2>
+    <p class="section-intro">Studenten Mediavormgeving, Content Creatie en Webdevelopment. Dit project is gemaakt door Aba &amp; Rick voor Periode 4 — Grafisch &amp; Functioneel Ontwerp.</p>
+  </section>
+
+  <footer class="site-footer">
+    <p>Urban Travel Blog — Berlijn 2026 · Proof of Concept · Periode 4</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CMS Dashboard — Urban Travel Blog Berlijn 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+  <!-- ===== Sidebar ===== -->
+  <aside class="sidebar">
+    <div class="brand">CMS<span>DASHBOARD</span></div>
+    <nav>
+      <button class="nav-item active" data-view="posts">📝 Blogposts</button>
+      <button class="nav-item" data-view="locaties">📍 Locaties</button>
+    </nav>
+    <a class="back-link" href="index.html">← Bekijk de website</a>
+    <p class="sidebar-note">Ingelogd als: <strong>Admin</strong></p>
+  </aside>
+
+  <!-- ===== Hoofdgedeelte ===== -->
+  <main class="content">
+
+    <!-- POSTS -->
+    <section id="view-posts" class="view">
+      <header class="content-head">
+        <div>
+          <h1>Blogposts beheren</h1>
+          <p>Voeg dagverslagen toe of bewerk bestaande posts. Deze verschijnen direct op de website.</p>
+        </div>
+        <button class="btn-primary" id="nieuwe-post">+ Nieuwe post</button>
+      </header>
+      <div id="posts-lijst" class="lijst"></div>
+    </section>
+
+    <!-- LOCATIES -->
+    <section id="view-locaties" class="view hidden">
+      <header class="content-head">
+        <div>
+          <h1>Locaties beheren</h1>
+          <p>Beheer de markers op de interactieve kaart. Coördinaten en categorie bepalen waar en hoe ze verschijnen.</p>
+        </div>
+        <button class="btn-primary" id="nieuwe-locatie">+ Nieuwe locatie</button>
+      </header>
+      <div id="locaties-lijst" class="lijst"></div>
+    </section>
+
+  </main>
+
+  <!-- ===== Modal: post bewerken ===== -->
+  <div id="modal-post" class="modal hidden">
+    <div class="modal-box">
+      <h2 id="post-modal-titel">Nieuwe post</h2>
+      <label>Dag
+        <input type="text" id="post-dag" placeholder="bijv. Dag 1">
+      </label>
+      <label>Titel
+        <input type="text" id="post-titel" placeholder="bijv. Aankomst in Berlijn">
+      </label>
+      <label>Tekst / samenvatting
+        <textarea id="post-tekst" rows="4" placeholder="Korte beschrijving van die dag…"></textarea>
+      </label>
+      <label>Afbeelding
+        <input type="file" id="post-foto" accept="image/*">
+        <span class="hint">Of plak een afbeeldings-URL hieronder:</span>
+        <input type="text" id="post-foto-url" placeholder="https://…">
+      </label>
+      <img id="post-foto-preview" class="preview hidden" alt="voorbeeld">
+      <div class="modal-acties">
+        <button class="btn-grijs" data-sluit>Annuleren</button>
+        <button class="btn-primary" id="post-opslaan">Opslaan</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Modal: locatie bewerken ===== -->
+  <div id="modal-locatie" class="modal hidden">
+    <div class="modal-box">
+      <h2 id="loc-modal-titel">Nieuwe locatie</h2>
+      <label>Naam
+        <input type="text" id="loc-naam" placeholder="bijv. DDR Museum">
+      </label>
+      <div class="rij">
+        <label>Latitude
+          <input type="text" id="loc-lat" placeholder="52.5192">
+        </label>
+        <label>Longitude
+          <input type="text" id="loc-lng" placeholder="13.4028">
+        </label>
+      </div>
+      <label>Categorie
+        <select id="loc-categorie">
+          <option value="museum">Museum</option>
+          <option value="street-art">Street art</option>
+          <option value="school">School</option>
+          <option value="horeca">Horeca</option>
+          <option value="overig">Overig</option>
+        </select>
+      </label>
+      <label>Beschrijving
+        <textarea id="loc-beschrijving" rows="3" placeholder="Korte beschrijving…"></textarea>
+      </label>
+      <div class="modal-acties">
+        <button class="btn-grijs" data-sluit>Annuleren</button>
+        <button class="btn-primary" id="loc-opslaan">Opslaan</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>
